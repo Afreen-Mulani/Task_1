@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Savorino — Authentic Flavors</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Savorino - cozy restaurant serving fresh seasonal dishes.">
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">Savorino</div>
+
+      <nav class="nav" id="nav">
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a class="btn" href="#reserve">Reserve</a>
+      </nav>
+
+      <button class="mobile-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <h1>Savor the Moment</h1>
+          <p>Fresh, seasonal ingredients — modern recipes with timeless flavors. Book a table or order online.</p>
+          <div class="hero-cta">
+            <a class="btn primary" href="#menu">See Menu</a>
+            <a class="btn ghost" href="#reserve">Reserve Table</a>
+          </div>
+        </div>
+
+        <div class="hero-image" aria-hidden="true">
+          <!-- Unsplash hero image (hot food / restaurant vibe) -->
+          <img class="hero-img" loading="lazy"
+            src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1400&q=80"
+            alt="Delicious plated dish">
+        </div>
+      </div>
+    </section>
+
+    <!-- MENU -->
+    <section class="menu container" id="menu">
+      <h2>Our Menu</h2>
+      <p class="subtitle">From small bites to hearty mains — hand-crafted by our chefs.</p>
+
+      <div class="menu-grid">
+        <article class="dish-card">
+          <div class="dish-photo">
+            <img loading="lazy"
+              src="https://images.unsplash.com/photo-1601924582975-7e3fdc0d6b5c?auto=format&fit=crop&w=800&q=80"
+              alt="Herb-Roasted Chicken">
+          </div>
+          <h3>Herb-Roasted Chicken</h3>
+          <p class="desc">Juicy chicken, rosemary jus, seasonal veg.</p>
+          <div class="meta"><span class="price">₹599</span><a class="link" href="#reserve">Order</a></div>
+        </article>
+
+        <article class="dish-card">
+          <div class="dish-photo">
+            <img loading="lazy"
+              src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&q=80"
+              alt="Truffle Mushroom Risotto">
+          </div>
+          <h3>Truffle Mushroom Risotto</h3>
+          <p class="desc">Creamy arborio rice, wild mushrooms, pecorino.</p>
+          <div class="meta"><span class="price">₹449</span><a class="link" href="#reserve">Order</a></div>
+        </article>
+
+        <article class="dish-card">
+          <div class="dish-photo">
+            <img loading="lazy"
+              src="https://images.unsplash.com/photo-1551782450-17144c3fa55c?auto=format&fit=crop&w=800&q=80"
+              alt="Spicy Prawn Linguine">
+          </div>
+          <h3>Spicy Prawn Linguine</h3>
+          <p class="desc">Sautéed prawns, chili-tomato sauce, lemon zest.</p>
+          <div class="meta"><span class="price">₹549</span><a class="link" href="#reserve">Order</a></div>
+        </article>
+
+        <article class="dish-card">
+          <div class="dish-photo">
+            <img loading="lazy"
+              src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=800&q=80"
+              alt="Chocolate Lava Cake">
+          </div>
+          <h3>Chocolate Lava Cake</h3>
+          <p class="desc">Warm molten center, vanilla ice cream.</p>
+          <div class="meta"><span class="price">₹249</span><a class="link" href="#reserve">Order</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about container" id="about">
+      <div class="about-grid">
+        <div>
+          <h2>About Savorino</h2>
+          <p>We blend local produce with global techniques to create dishes that are simple, seasonal, and full of flavor. Open daily for lunch and dinner.</p>
+          <ul class="info-list">
+            <li>🕒 Open: 11:30 AM — 11:00 PM</li>
+            <li>📍 Location: Central Market, Pune</li>
+            <li>📞 Phone: +91 98765 43210</li>
+          </ul>
+        </div>
+        <div class="testimonials">
+          <h3>What diners say</h3>
+          <blockquote>“Fantastic flavors and warm service. Our new favorite!” — Aisha</blockquote>
+          <blockquote>“The risotto is unreal. Highly recommend.” — Rohan</blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESERVATION CTA -->
+    <section class="reserve container" id="reserve">
+      <div class="reserve-box">
+        <h2>Reserve a Table</h2>
+        <p>Reserve online or call us to secure your table.</p>
+        <div class="reserve-actions">
+          <a class="btn primary" href="tel:+919876543210">Call to Reserve</a>
+          <a class="btn" href="#contact">Reserve Online</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Savorino</div>
+      <div class="social">
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="Facebook">Facebook</a>
+        <a href="#" aria-label="Google Maps">Map</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Small JS for menu + year -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const toggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('nav');
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('open');
+      toggle.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
